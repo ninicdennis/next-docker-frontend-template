@@ -1,0 +1,12 @@
+version: '3'
+services:
+  front-end:
+    build:
+      context: ./
+    ports:
+      - "3000:3000"
+      - "49153:49153"
+    container_name: next-front
+    volumes:
+       - ./:/usr/src/app
+       - /usr/src/app/node_modules
